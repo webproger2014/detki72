@@ -3,7 +3,7 @@
     <div class="wrapper"> 
         <div class="slider-images bg">
             <span class="bg_next1"></span>
-            <div class="owl-carousel">
+            <div class="owl-carousel"  id="owl-carousel">
                 <img id="0" class="img-slide" src="{$templateWebPath}images/girl.png">
                 <img id="1" class="img-slide" src="{$templateWebPath}images/sharf1.jpg">
             </div>    

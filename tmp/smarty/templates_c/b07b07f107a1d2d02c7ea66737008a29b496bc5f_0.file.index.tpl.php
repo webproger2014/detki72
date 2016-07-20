@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-20 12:20:07
+/* Smarty version 3.1.29, created on 2016-07-20 13:01:00
   from "C:\wamp\www\cms\views\default\index\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578f5057701620_88044784',
+  'unifunc' => 'content_578f59ec1426a5_35728322',
   'file_dependency' => 
   array (
     'b07b07f107a1d2d02c7ea66737008a29b496bc5f' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\index.tpl',
-      1 => 1469010004,
+      1 => 1469012458,
       2 => 'file',
     ),
   ),
@@ -19,14 +19,14 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578f5057701620_88044784 ($_smarty_tpl) {
+function content_578f59ec1426a5_35728322 ($_smarty_tpl) {
 ?>
 
 <div class="container-slider">
     <div class="wrapper"> 
         <div class="slider-images bg">
             <span class="bg_next1"></span>
-            <div class="owl-carousel">
+            <div class="owl-carousel"  id="owl-carousel">
                 <img id="0" class="img-slide" src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>
 images/girl.png">
                 <img id="1" class="img-slide" src="<?php echo $_smarty_tpl->tpl_vars['templateWebPath']->value;?>

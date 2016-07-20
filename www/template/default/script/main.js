@@ -39,16 +39,17 @@ function animateLefNav(result, self) {
 //> slider
     //owl carousel
     $(document).ready(function () {
-        var owl = $('.owl-carousel');
+        var owl = $('#owl-carousel');
         owl.owlCarousel({
             items:1,
             loop: true,
             margin:0,
             nav: false,
-            autoHeight: false,
+            autoHeight: true,
             autoplay: false,
             autoplayTimeout:1000,
-            autoplayHoverPause:true
+            autoplayHoverPause:true,
+            mouseDrag: false
         });
         
          //previevgi
