@@ -156,16 +156,29 @@
         <i class="fa fa-times" aria-hidden="true"></i>
     </span>
     
-	<div id="login">
+	<div id="login" class="auth">
             <div id="messages"></div>
-            <form class="auth">
+            <form>
 		<fieldset class="clearfix">
                     <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
                     <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
                     <p><input type="submit" value="ВОЙТИ" id="auth"></p>
 		</fieldset>
             </form>
-	<p>Нет аккаунта? &nbsp;&nbsp;<a href="#">Регистрация</a><span class="fontawesome-arrow-right"></span></p>
+	<p>Нет аккаунта? &nbsp;&nbsp;<a href="#" id="reg">Регистрация</a><span class="fontawesome-arrow-right"></span></p>
     </div>
+    
+	<div id="login" class="reg">
+            <div id="messages"></div>
+            <form>
+		<fieldset class="clearfix">
+                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><input type="submit" value="РЕГИСТРАЦИЯ" id="auth"></p>
+		</fieldset>
+            </form>
+            <p> Вы зарегистрированы?&nbsp;&nbsp;<a href="#" id="auth">Вход</a><span class="fontawesome-arrow-right"></span></p>
+    </div>    
 </div>	
                 

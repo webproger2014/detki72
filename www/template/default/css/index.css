@@ -970,5 +970,9 @@ span {
     color: #b33a68;
     margin-bottom: 10px;
 }
+
+#modal-auth .reg {
+    display: none;
+}
 /*< AUTH MODAL */
 

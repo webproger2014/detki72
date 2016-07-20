@@ -25,6 +25,11 @@
   
         echo json_encode($data);
     }
+    
+    function createAcccountAction() {
+        
+    }
+    
     //< ajax
     
     

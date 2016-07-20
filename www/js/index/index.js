@@ -89,5 +89,19 @@
             var modal = $('#modal-auth');
             $(modal).fadeOut(200);       
         });
+        
+         //register account
+         $('#modal-auth .auth a#reg').click(function () {
+             showSuccess('#modal-auth #messages', '');
+             $("#modal-auth .auth").css('display', 'none');
+             $("#modal-auth .reg").show(200);
+         });
+         
+          //auth account
+         $('#modal-auth .reg a#auth').click(function () {
+             showSuccess('#modal-auth #messages', '');
+             $("#modal-auth .reg").css('display', 'none');
+             $("#modal-auth .auth").show(200);
+         });        
     });
 //

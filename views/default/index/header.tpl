@@ -44,6 +44,7 @@
                         <div class="bg"></div>
                         <div class="content">
                             {if $user}
+                                {$user.info.name_user}
                                 <a href="/index/logout">Выход</a>
                             {else}
                                 <a class="auth" href="#">Вход на сайт</a>

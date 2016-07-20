@@ -42,4 +42,15 @@
         mysqli_close($mysqli);
    
         return createSmartyRsArray($rs);          
-    }    
+    }
+
+    //Получим информацию о пользователе (город,имя, фамилию, телефон)
+    function getInfoUser($id_user) {
+        $mysqli = createMysqli();
+        $sql =  "SELECT * FROM `info_user` WHERE `id_user`={$id_user}";
+   
+        $rs = mysqli_query($mysqli, $sql);
+        mysqli_close($mysqli);
+   
+        return createSmartyRsArray($rs);            
+    }

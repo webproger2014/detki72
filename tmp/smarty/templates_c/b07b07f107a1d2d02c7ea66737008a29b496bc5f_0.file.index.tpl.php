@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-20 13:29:30
+/* Smarty version 3.1.29, created on 2016-07-20 13:59:05
   from "C:\wamp\www\cms\views\default\index\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578f609a255085_61663673',
+  'unifunc' => 'content_578f6789ee5b35_01802179',
   'file_dependency' => 
   array (
     'b07b07f107a1d2d02c7ea66737008a29b496bc5f' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\index.tpl',
-      1 => 1469014168,
+      1 => 1469015944,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578f609a255085_61663673 ($_smarty_tpl) {
+function content_578f6789ee5b35_01802179 ($_smarty_tpl) {
 ?>
 
 <div class="container-slider">
@@ -189,17 +189,30 @@ images/children.png"></div>
         <i class="fa fa-times" aria-hidden="true"></i>
     </span>
     
-	<div id="login">
+	<div id="login" class="auth">
             <div id="messages"></div>
-            <form class="auth">
+            <form>
 		<fieldset class="clearfix">
                     <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
                     <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
                     <p><input type="submit" value="ВОЙТИ" id="auth"></p>
 		</fieldset>
             </form>
-	<p>Нет аккаунта? &nbsp;&nbsp;<a href="#">Регистрация</a><span class="fontawesome-arrow-right"></span></p>
+	<p>Нет аккаунта? &nbsp;&nbsp;<a href="#" id="reg">Регистрация</a><span class="fontawesome-arrow-right"></span></p>
     </div>
+    
+	<div id="login" class="reg">
+            <div id="messages"></div>
+            <form>
+		<fieldset class="clearfix">
+                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><input type="submit" value="РЕГИСТРАЦИЯ" id="auth"></p>
+		</fieldset>
+            </form>
+            <p> Вы зарегистрированы?&nbsp;&nbsp;<a href="#" id="auth">Вход</a><span class="fontawesome-arrow-right"></span></p>
+    </div>    
 </div>	
                 <?php }
 }
