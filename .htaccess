@@ -1,0 +1,14 @@
+AddDefaultCharset utf-8
+Options Indexes FollowSymLinks 
+DirectoryIndex index.php
+
+
+
+RewriteEngine on
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*[^\/])$ /$1/ [R=301,L]
+RewriteRule ^([a-zA-Z0-9\-\/]+)$ index.php/?controller=$1 [L,QSA]
