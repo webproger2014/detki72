@@ -61,8 +61,25 @@ function animateLefNav(result, self) {
         $('.container-slider .bg_next2').click(function () {
             $('.owl-nav .owl-next').trigger('click');
             slide();
-    });
-          
+        });
+         
+        //autoplay
+        var timeSlide = setInterval(function () {
+             $('.container-slider .bg_next2').trigger('click');
+        }, 6000);
+        
+         //pause play
+        $('.container-slider').mouseover(function () {
+            clearInterval(timeSlide);
+            l('остановлен')
+        })
+        
+        //start play
+        $('.container-slider').mouseout(function () {
+            timeSlide = setInterval(function () {
+                $('.container-slider .bg_next2').trigger('click');
+            }, 6000);
+        })        
     });
     
     function slide() {
