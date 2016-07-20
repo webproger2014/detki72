@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-20 10:24:31
+/* Smarty version 3.1.29, created on 2016-07-20 12:20:07
   from "C:\wamp\www\cms\views\default\index\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578f353f6156b5_65645663',
+  'unifunc' => 'content_578f5057701620_88044784',
   'file_dependency' => 
   array (
     'b07b07f107a1d2d02c7ea66737008a29b496bc5f' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\index.tpl',
-      1 => 1469003069,
+      1 => 1469010004,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578f353f6156b5_65645663 ($_smarty_tpl) {
+function content_578f5057701620_88044784 ($_smarty_tpl) {
 ?>
 
 <div class="container-slider">
@@ -181,5 +181,24 @@ images/children.png"></div>
             </div>              
         </div>
     </div>
-</div><?php }
+</div>
+                
+                
+<div id="modal-auth">
+    <span id="close-auth-modal">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </span>
+    
+	<div id="login">
+            <form action="javascript:void(0);" method="get">
+		<fieldset class="clearfix">
+                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><input type="submit" value="ВОЙТИ"></p>
+		</fieldset>
+            </form>
+	<p>Нет аккаунта? &nbsp;&nbsp;<a href="#">Регистрация</a><span class="fontawesome-arrow-right"></span></p>
+    </div>
+</div>	
+                <?php }
 }

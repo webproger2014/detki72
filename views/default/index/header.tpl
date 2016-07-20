@@ -43,8 +43,8 @@
                     <div class="container-autorization">
                         <div class="bg"></div>
                         <div class="content">
-                            <a href="autorization/autorization">Вход на сайт</a>
-                            <a href="autorization/register">Регистрация</a>
+                            <a class="auth" href="#">Вход на сайт</a>
+                            <a class="auth" href="#">Регистрация</a>
                         </div>
                     </div>
                 </div> 
@@ -59,23 +59,17 @@
             <div class="nav">
                 <ul>
                     <li class="active">
-                        <a href="#">TMP 1</a>
+                        <a href="#">Одежда на лето</a>
                     </li>
                     <li>
-                        <a href="#">TMP 2</a>
+                        <a href="#">Зимняя одежда</a>
                     </li>                       
                     <li>
-                        <a href="#">TMP 3</a>
+                        <a href="#">спортивная одежда</a>
                     </li>
                     <li>
-                        <a href="#">TMP 4</a>
-                    </li>                       
-                    <li>
-                        <a href="#">TMP 5</a>
-                    </li>
-                    <li>
-                        <a href="#">TMP 6</a>
-                    </li>                    
+                        <a href="#">детская одежда</a>
+                    </li>                                         
                 </ul>
             </div>
         </div>

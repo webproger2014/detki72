@@ -68,6 +68,7 @@
 
     <!-- CMS -->                
     <script type="text/javascript" src="{$js}library/cms.js"></script>
+    <script type="text/javascript" src="{$js}index/index.js"></script>
     <!-- /CMS -->
     
     <!-- TEMPLATE -->

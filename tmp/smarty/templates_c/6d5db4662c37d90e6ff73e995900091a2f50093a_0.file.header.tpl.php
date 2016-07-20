@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-19 11:17:02
+/* Smarty version 3.1.29, created on 2016-07-20 12:32:52
   from "C:\wamp\www\cms\views\default\index\header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578df00e676616_28979709',
+  'unifunc' => 'content_578f535413b695_56715589',
   'file_dependency' => 
   array (
     '6d5db4662c37d90e6ff73e995900091a2f50093a' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\header.tpl',
-      1 => 1468919820,
+      1 => 1469010769,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578df00e676616_28979709 ($_smarty_tpl) {
+function content_578f535413b695_56715589 ($_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -67,8 +67,8 @@ css/index.css">
                     <div class="container-autorization">
                         <div class="bg"></div>
                         <div class="content">
-                            <a href="autorization/autorization">Вход на сайт</a>
-                            <a href="autorization/register">Регистрация</a>
+                            <a class="auth" href="#">Вход на сайт</a>
+                            <a class="auth" href="#">Регистрация</a>
                         </div>
                     </div>
                 </div> 
@@ -84,23 +84,17 @@ icons/logo.png">
             <div class="nav">
                 <ul>
                     <li class="active">
-                        <a href="#">TMP 1</a>
+                        <a href="#">Одежда на лето</a>
                     </li>
                     <li>
-                        <a href="#">TMP 2</a>
+                        <a href="#">Зимняя одежда</a>
                     </li>                       
                     <li>
-                        <a href="#">TMP 3</a>
+                        <a href="#">спортивная одежда</a>
                     </li>
                     <li>
-                        <a href="#">TMP 4</a>
-                    </li>                       
-                    <li>
-                        <a href="#">TMP 5</a>
-                    </li>
-                    <li>
-                        <a href="#">TMP 6</a>
-                    </li>                    
+                        <a href="#">детская одежда</a>
+                    </li>                                         
                 </ul>
             </div>
         </div>

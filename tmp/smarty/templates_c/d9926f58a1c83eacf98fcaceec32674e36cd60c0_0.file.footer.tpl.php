@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-19 08:35:23
+/* Smarty version 3.1.29, created on 2016-07-20 11:39:28
   from "C:\wamp\www\cms\views\default\index\footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578dca2bd033d6_39500134',
+  'unifunc' => 'content_578f46d062ff91_16338964',
   'file_dependency' => 
   array (
     'd9926f58a1c83eacf98fcaceec32674e36cd60c0' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\footer.tpl',
-      1 => 1468910030,
+      1 => 1469007565,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578dca2bd033d6_39500134 ($_smarty_tpl) {
+function content_578f46d062ff91_16338964 ($_smarty_tpl) {
 ?>
    
 
@@ -103,6 +103,10 @@ icons/master.png">
     <?php echo '<script'; ?>
  type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['js']->value;?>
 library/cms.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['js']->value;?>
+index/index.js"><?php echo '</script'; ?>
 >
     <!-- /CMS -->
     

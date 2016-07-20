@@ -51,7 +51,7 @@ function animateLefNav(result, self) {
             autoplayHoverPause:true
         });
         
-         //previev
+         //previevgi
         $('.slider-images .bg_next1').click(function () {
             $('.owl-nav .owl-prev').trigger('click');
             slide();
@@ -71,7 +71,6 @@ function animateLefNav(result, self) {
          //pause play
         $('.container-slider').mouseover(function () {
             clearInterval(timeSlide);
-            l('остановлен')
         })
         
         //start play

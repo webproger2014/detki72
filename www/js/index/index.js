@@ -79,3 +79,21 @@
         }
     }
 //<
+
+
+//AUTH
+    $(document).ready(function() {
+        
+        //display modal auth
+        $('.auth').click(function () {
+            var modal = $('#modal-auth');
+            $(modal).fadeIn(200);
+        });
+        
+        //hide display modal auth
+        $("#close-auth-modal").click(function () {
+            var modal = $('#modal-auth');
+            $(modal).fadeOut(200);       
+        });
+    });
+//
