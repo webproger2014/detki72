@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-20 13:01:00
+/* Smarty version 3.1.29, created on 2016-07-20 13:29:30
   from "C:\wamp\www\cms\views\default\index\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578f59ec1426a5_35728322',
+  'unifunc' => 'content_578f609a255085_61663673',
   'file_dependency' => 
   array (
     'b07b07f107a1d2d02c7ea66737008a29b496bc5f' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\index.tpl',
-      1 => 1469012458,
+      1 => 1469014168,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578f59ec1426a5_35728322 ($_smarty_tpl) {
+function content_578f609a255085_61663673 ($_smarty_tpl) {
 ?>
 
 <div class="container-slider">
@@ -190,11 +190,12 @@ images/children.png"></div>
     </span>
     
 	<div id="login">
-            <form action="javascript:void(0);" method="get">
+            <div id="messages"></div>
+            <form class="auth">
 		<fieldset class="clearfix">
-                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-                    <p><input type="submit" value="ВОЙТИ"></p>
+                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><input type="submit" value="ВОЙТИ" id="auth"></p>
 		</fieldset>
             </form>
 	<p>Нет аккаунта? &nbsp;&nbsp;<a href="#">Регистрация</a><span class="fontawesome-arrow-right"></span></p>

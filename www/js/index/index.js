@@ -1,38 +1,32 @@
 
 //> Подписываемся на события
-    $(document).ready(function () {      
-        //Подтверждение email
-        $('.container-form:nth-child(2) .inputs button').click(function () {
-           $('.container-form:nth-child(2)').css('display', 'none');
-           
-           $('.container-form:nth-child(3)').fadeIn(350);
-        }); 
+    $(document).ready(function () {     
         
-         //Проверка email на корректность - вход
-        $('.container-form:nth-child(1) #email').keyup(function () {
+    //Проверка email на корректность - вход
+        $('#modal-auth .auth #email').keyup(function () {
             var data = checkDataEmail($(this).val());
 
             if (data["success"] === 1) {
-                showSuccess('.login-email', '');
+                showSuccess('#modal-auth #messages', '');
             } else {
-                showError('.login-email', data["messages"]);
+                showError('#modal-auth #messages', data["messages"]);
             }
         }); 
 
         //Проверка email на корректность - вход
-        $('.container-form:nth-child(1) button').click(function () {
+        $('#modal-auth .auth #auth').click(function () {
             var data = checkDataAutorization();
             
             if (data["success"] === 1) {
                 showSuccess('.login-email', '');
                 var src = '/autorization/autorization/',
                     data_post = {
-                        "email": $('.container-form:nth-child(1) #email').val(),
-                        "psw": $('.container-form:nth-child(1) #password').val()
+                        "email": $('#modal-auth .auth #email').val(),
+                        "psw": $('#modal-auth .auth #psw').val()
                     };
                 ajaxPost(src, data_post, 'autorizationUser');
              } else {
-                showError('.login-email', data["messages"]); 
+                showError('#modal-auth #messages', data["messages"]); 
             }
         });            
         //<
@@ -41,10 +35,10 @@
 
 //> List functions
     function checkDataAutorization() {
-        var data = checkDataEmail($('.container-form:nth-child(1) #email').val());
+        var data = checkDataEmail($('#modal-auth .auth #email').val());
         
         if (data["success"] === 1) {
-            data = checkDataPassword($('.container-form:nth-child(1) #password').val());
+            data = checkDataPassword($('#modal-auth .auth #psw').val());
         } 
         return data;
     }
@@ -75,7 +69,7 @@
         if (data["success"] === 1) {;
             location.href = data["controller"];
         } else {
-            showError('.login-email', data["messages"]);
+            showError('#modal-auth #messages', data["messages"]);
         }
     }
 //<

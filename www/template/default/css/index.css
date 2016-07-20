@@ -965,5 +965,10 @@ span {
     transition: 0.4s;
     color: #ea4c88;
 }
+
+#modal-auth #messages {
+    color: #b33a68;
+    margin-bottom: 10px;
+}
 /*< AUTH MODAL */
 

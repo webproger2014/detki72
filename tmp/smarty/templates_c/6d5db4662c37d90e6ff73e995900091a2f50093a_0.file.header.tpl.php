@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-20 12:32:52
+/* Smarty version 3.1.29, created on 2016-07-20 13:38:41
   from "C:\wamp\www\cms\views\default\index\header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578f535413b695_56715589',
+  'unifunc' => 'content_578f62c162f120_87670740',
   'file_dependency' => 
   array (
     '6d5db4662c37d90e6ff73e995900091a2f50093a' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\header.tpl',
-      1 => 1469010769,
+      1 => 1469014719,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578f535413b695_56715589 ($_smarty_tpl) {
+function content_578f62c162f120_87670740 ($_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -67,8 +67,12 @@ css/index.css">
                     <div class="container-autorization">
                         <div class="bg"></div>
                         <div class="content">
-                            <a class="auth" href="#">Вход на сайт</a>
-                            <a class="auth" href="#">Регистрация</a>
+                            <?php if ($_smarty_tpl->tpl_vars['user']->value) {?>
+                                <a href="/index/logout">Выход</a>
+                            <?php } else { ?>
+                                <a class="auth" href="#">Вход на сайт</a>
+                                <a class="auth" href="#">Регистрация</a>       
+                            <?php }?>
                         </div>
                     </div>
                 </div> 

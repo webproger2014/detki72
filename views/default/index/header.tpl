@@ -43,8 +43,12 @@
                     <div class="container-autorization">
                         <div class="bg"></div>
                         <div class="content">
-                            <a class="auth" href="#">Вход на сайт</a>
-                            <a class="auth" href="#">Регистрация</a>
+                            {if $user}
+                                <a href="/index/logout">Выход</a>
+                            {else}
+                                <a class="auth" href="#">Вход на сайт</a>
+                                <a class="auth" href="#">Регистрация</a>       
+                            {/if}
                         </div>
                     </div>
                 </div> 
