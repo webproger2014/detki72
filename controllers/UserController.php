@@ -16,6 +16,9 @@
     }
     
     function indexAction($smarty, $user) {
+        
+        $smarty -> assign('user', $user);
+        
         loadTemplate($smarty, 'user/header');
         loadTemplate($smarty, 'user/index');
         loadTemplate($smarty, 'user/footer');
