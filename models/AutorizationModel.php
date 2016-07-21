@@ -20,4 +20,13 @@
    
         mysqli_query($mysqli, $sql);
         mysqli_close($mysqli);         
-    }    
+    }
+    
+    function createAccount($data) {
+        $mysqli = createMysqli();
+        $sql =  "INSERT INTO users(login,password) 
+                  VALUE('{$data["email"]}', '{$data["psw"]}')";
+   
+        mysqli_query($mysqli, $sql);
+        mysqli_close($mysqli);         
+    }

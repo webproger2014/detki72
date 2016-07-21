@@ -52,7 +52,7 @@
                     <span class="number">68-35-42</span>
                     <span class="number">91-91-75</span>
                      <div class="zvonok">
-                        <a href="#">Заказть звонок</a>
+                        <a href="#">Заказать звонок</a>
                         <span></span>
                     </div> 
                     <div>

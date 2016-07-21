@@ -62,9 +62,21 @@
             data["messages"] = 'Введите пароль';
             data["success"]  = 0;
         }
+        
         return data;
     }
-    
+  
+    function checkDataPassword2(psw) {
+        var data = [];
+        
+        data["success"] = 1;
+        if (psw === '') {
+            data["messages"] = 'Повторите пароль';
+            data["success"]  = 0;
+        }
+        return data;
+    }
+
     function autorizationUser(data) {
         if (data["success"] === 1) {;
             location.href = data["controller"];
@@ -102,6 +114,54 @@
              showSuccess('#modal-auth #messages', '');
              $("#modal-auth .reg").css('display', 'none');
              $("#modal-auth .auth").show(200);
-         });        
+         });
+         
+         
+         //createAccount
+         $('#modal-auth .reg #createAccount').click(function () {
+            var email = $('#modal-auth .reg #email').val(),
+                psw1  = $('#modal-auth .reg #psw1').val(),
+                psw2  = $('#modal-auth .reg #psw2').val();
+            
+            var data = checkDataEmail(email);
+            
+            if (data["success"] === 1) {
+                data =  checkDataPassword(psw1);
+            }
+            
+            if (data["success"] === 1) {
+                data =  checkDataPassword2(psw2);
+            }
+            
+            if (data["success"] === 1) {
+                if (psw1 !== psw2) {
+                    data["success"] = 0;
+                    data["messages"] = 'Пароли не совпадают';
+                }
+            }
+            
+            if (data["success"] === 1) {
+                var data_post = {
+                    'email': email,
+                    'psw1': psw1,
+                    'psw2': psw2
+                };
+                
+                ajaxPost('/autorization/createAcccount/', data_post, 'displayMessagesCreateAccount');
+            } else {
+                showError('#modal-auth #messages', data["messages"]);
+            }
+         });
     });
+    
+    
+    function displayMessagesCreateAccount(data) {
+         if (data["success"] === 1) {;
+            location.href = data["controller"];
+        } else {
+            showError('#modal-auth #messages', data["messages"]);
+        }      
+    }
 //
+
+

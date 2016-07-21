@@ -54,3 +54,13 @@
    
         return createSmartyRsArray($rs);            
     }
+    
+    function getUserByEmail($user_email) {
+        $mysqli = createMysqli();
+        $sql =  "SELECT * FROM `users` WHERE `login`='{$user_email}'";
+   
+        $rs = mysqli_query($mysqli, $sql);
+        mysqli_close($mysqli);
+   
+        return createSmartyRsArray($rs);         
+    }

@@ -78,7 +78,7 @@ function ajaxGet(src, action) {
   });
 }
 
-var POST = {};
+
 
 //Объявление событий
 $(document).ready(function () {

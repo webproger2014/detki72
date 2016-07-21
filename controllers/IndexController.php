@@ -9,9 +9,11 @@
     
     
     function indexAction($smarty, $user) {
-         $user["info"] = getInfoUser($user["id"]);
-         
-         $smarty -> assign('user', $user);
+         if ($user) {
+             $user["info"] = getInfoUser($user["id"]);
+             $smarty -> assign('user', $user);
+         }
+
 
          loadTemplate($smarty, 'index/header');
          loadTemplate($smarty, 'index/index');

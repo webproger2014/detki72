@@ -31,62 +31,63 @@
     }
   
   
-   //Загрузка шаблона
-  function loadTemplate($smarty, $templateName) {
-        $smarty -> display($templateName.TemplatePostFix);
-    }
-   
-  function getHtmlTemplate($smarty, $templateName) {
-      return $smarty -> fetch($templateName.TemplatePostFix); 
-  }
-  
-  function createSmartyRsArray($rs) {
-      if (!$rs) return false;
-      
+    //Загрузка шаблона
+   function loadTemplate($smarty, $templateName) {
+         $smarty -> display($templateName.TemplatePostFix);
+     }
+
+   function getHtmlTemplate($smarty, $templateName) {
+       return $smarty -> fetch($templateName.TemplatePostFix); 
+   }
+
+   function createSmartyRsArray($rs) {
+       if (!$rs) return false;
+
+       $smartyRs = [];
+       while ($row = mysqli_fetch_assoc($rs)) {
+           $smartyRs = $row;
+       }
+
+       return $smartyRs;
+   }
+
+   function createSmartyRsAllArr($rs) {
+      if (!$rs) return false; 
+
       $smartyRs = [];
       while ($row = mysqli_fetch_assoc($rs)) {
-          $smartyRs = $row;
+          $smartyRs[] = $row;
       }
-      
       return $smartyRs;
-  }
-  
-  function createSmartyRsAllArr($rs) {
-     if (!$rs) return false; 
-     
-     $smartyRs = [];
-     while ($row = mysqli_fetch_assoc($rs)) {
-         $smartyRs[] = $row;
+   }
+
+   function createArrInString($arr) {
+       $str = '';
+       if ($arr && is_array($arr)) {        
+           foreach ($arr as $value) {
+               $str .= $value;
+           }
+       }     
+       return $str;
+   }
+   
+   function filterEmail($email) {
+     if (preg_match('/^[A-Z|a-z0-9]{2,20}@[a-z\d]{2,10}\.[a-z\d]{2,10}$/', $email)) {
+         return true;
+     } else {
+         return false;               
      }
-     return $smartyRs;
-  }
-  
-  function createArrInString($arr) {
-      $str = '';
-      if ($arr && is_array($arr)) {        
-          foreach ($arr as $value) {
-              $str .= $value;
-          }
-      }     
-      return $str;
-  }
-  function filterEmail($email) {
-    if (preg_match('/^[A-Z|a-z0-9]{2,20}@[a-z\d]{2,10}\.[a-z\d]{2,10}$/', $email)) {
-	return true;
-    } else {
-	return false;               
-    }
-  }
-  
-  function generateHash($hash = 20) {
-	$str = '1234567890qwertyuiopasdfghjklzxcvbnm';
-	$result = '';
-	for ($s = 0; $s < $hash; $s++) {
-            $result .= $str[mt_rand(1, 34)];		  
-	}
-		
-	return $result;
-    }   
+   }
+
+    function generateHash($hash = 20) {
+        $str = '1234567890qwertyuiopasdfghjklzxcvbnm';
+        $result = '';
+        for ($s = 0; $s < $hash; $s++) {
+              $result .= $str[mt_rand(1, 34)];		  
+        }
+
+        return $result;
+      }   
 
     function locationController($controller) {
         header('Location: /' . $controller);
@@ -114,6 +115,6 @@
         return $paginator;
     }
     
-function sendMail($email, $subject, $messages) {
-    mail($email, $subject, $messages, "Content-type: text/html; charset=utf8' . '\r\n'");
-}
+    function sendMail($email, $subject, $messages) {
+        mail($email, $subject, $messages, "Content-type: text/html; charset=utf8' . '\r\n'");
+    }

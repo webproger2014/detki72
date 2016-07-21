@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-20 13:59:05
+/* Smarty version 3.1.29, created on 2016-07-21 07:47:46
   from "C:\wamp\www\cms\views\default\index\index.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_578f6789ee5b35_01802179',
+  'unifunc' => 'content_579062022f3b26_38021507',
   'file_dependency' => 
   array (
     'b07b07f107a1d2d02c7ea66737008a29b496bc5f' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\index.tpl',
-      1 => 1469015944,
+      1 => 1469080064,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_578f6789ee5b35_01802179 ($_smarty_tpl) {
+function content_579062022f3b26_38021507 ($_smarty_tpl) {
 ?>
 
 <div class="container-slider">
@@ -205,10 +205,10 @@ images/children.png"></div>
             <div id="messages"></div>
             <form>
 		<fieldset class="clearfix">
-                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-                    <p><input type="submit" value="РЕГИСТРАЦИЯ" id="auth"></p>
+                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" placeholder="Логин" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw1" type="password"  placeholder="****" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw2" type="password"  placeholder="****" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><input type="submit" value="РЕГИСТРАЦИЯ" id="createAccount"></p>
 		</fieldset>
             </form>
             <p> Вы зарегистрированы?&nbsp;&nbsp;<a href="#" id="auth">Вход</a><span class="fontawesome-arrow-right"></span></p>

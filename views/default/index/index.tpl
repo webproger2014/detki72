@@ -172,10 +172,10 @@
             <div id="messages"></div>
             <form>
 		<fieldset class="clearfix">
-                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" value="Логин" onBlur="if(this.value == '') this.value = 'Логин'" onFocus="if(this.value == 'Логин') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
-                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw" type="password"  value="Пароль" onBlur="if(this.value == '') this.value = 'Пароль'" onFocus="if(this.value == 'Пароль') this.value = ''" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
-                    <p><input type="submit" value="РЕГИСТРАЦИЯ" id="auth"></p>
+                    <p><span class="fontawesome-user"><i class="fa fa-user" aria-hidden="true"></i></span><input id="email" type="text" placeholder="Логин" required></p> <!-- JS because of IE support; better: placeholder="Username" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw1" type="password"  placeholder="****" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><span class="fontawesome-lock"><i class="fa fa-lock" aria-hidden="true"></i></span><input id="psw2" type="password"  placeholder="****" required></p> <!-- JS because of IE support; better: placeholder="Password" -->
+                    <p><input type="submit" value="РЕГИСТРАЦИЯ" id="createAccount"></p>
 		</fieldset>
             </form>
             <p> Вы зарегистрированы?&nbsp;&nbsp;<a href="#" id="auth">Вход</a><span class="fontawesome-arrow-right"></span></p>

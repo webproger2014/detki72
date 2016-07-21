@@ -27,7 +27,85 @@
     }
     
     function createAcccountAction() {
+        $data = checkDataCreateAccount();
         
+        if ($data["success"] === 1) {
+            createAccount($data);
+            autorizationUser($data);
+            $data["messages"] = 'add to account success';
+        }
+        
+        echo json_encode($data);
+    }
+    
+    
+    function checkDataCreateAccount() {
+        $data["success"] = 1;   
+        $data = checkDataCreateLogin($data);
+        
+        if ($data["success"] === 1) {
+            $data = checkDataCreateAccountPassword($data);
+        }
+        
+        return $data;
+    }
+    
+    
+    //Проверка данных для регистрации
+    function checkDataCreateLogin($data) {
+         $email = isset($_POST["email"]) ? trim(strip_tags($_POST["email"])) : null;
+        
+         if (!$email) {
+            $data["messages"] = 'Введите email';
+            $data["success"]  = 0;
+         }
+         
+        if ($data["success"] === 1) {
+             if (!filterEmail($email)) {
+                $data["messages"] = 'Некорректный email';
+                $data["success"]  = 0;                
+             }
+         }
+         
+         if ($data["success"] === 1) {
+             if (getUserByEmail($email)) {
+                $data["messages"] = 'Данный email зарегистрирован';
+                $data["success"]  = 0;                   
+             } else {
+                 $data["email"] = $email;
+             }
+         }
+         
+         return $data;
+    }
+    
+    function checkDataCreateAccountPassword($data) {
+         $psw1 = isset($_POST["psw1"]) ? trim(strip_tags($_POST["psw1"])) : null;
+         $psw2 = isset($_POST["psw2"]) ? trim(strip_tags($_POST["psw2"])) : null;
+        
+         if (!$psw1) {
+            $data["messages"] = 'Введите  пароль';
+            $data["success"]  = 0;
+         }
+         
+         if ($data["success"] === 1) {
+             if (!$psw2) {
+                $data["messages"] = 'Повторить пароль';
+                $data["success"]  = 0;                
+             }
+         }
+         
+         
+         if ($data["success"] === 1) {
+             if ($psw1 !== $psw2) {
+                $data["messages"] = 'Пароли не совпадают';
+                $data["success"]  = 0;                   
+             } else {
+                $data['psw'] = md5(md5($psw1));
+             }
+         }
+         
+         return $data;        
     }
     
     //< ajax
