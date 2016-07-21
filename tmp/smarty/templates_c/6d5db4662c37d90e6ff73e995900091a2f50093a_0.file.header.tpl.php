@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-21 05:51:14
+/* Smarty version 3.1.29, created on 2016-07-21 10:24:02
   from "C:\wamp\www\cms\views\default\index\header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_579046b276a871_53629328',
+  'unifunc' => 'content_579086a213bcd6_81569094',
   'file_dependency' => 
   array (
     '6d5db4662c37d90e6ff73e995900091a2f50093a' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\index\\header.tpl',
-      1 => 1469073072,
+      1 => 1469089439,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_579046b276a871_53629328 ($_smarty_tpl) {
+function content_579086a213bcd6_81569094 ($_smarty_tpl) {
 ?>
 <html>
     <head>
@@ -68,6 +68,10 @@ css/index.css">
                         <div class="bg"></div>
                         <div class="content">
                             <?php if (isset($_smarty_tpl->tpl_vars['user']->value) && $_smarty_tpl->tpl_vars['user']->value) {?>
+                                <?php if ($_smarty_tpl->tpl_vars['user']->value['info']['name_user']) {?>
+                                    <?php echo $_smarty_tpl->tpl_vars['user']->value['info']['name_user'];?>
+
+                                <?php }?>
                                 <a href="/index/logout">Выход</a>
                             <?php } else { ?>
                                 <a class="auth" href="#">Вход на сайт</a>

@@ -44,6 +44,9 @@
                         <div class="bg"></div>
                         <div class="content">
                             {if isset($user) && $user}
+                                {if $user.info.name_user}
+                                    {$user.info.name_user}
+                                {/if}
                                 <a href="/index/logout">Выход</a>
                             {else}
                                 <a class="auth" href="#">Вход на сайт</a>

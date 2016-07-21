@@ -30,3 +30,12 @@
         mysqli_query($mysqli, $sql);
         mysqli_close($mysqli);         
     }
+
+    function  setInfoUserById($user_id) {
+         $mysqli = createMysqli();
+         $sql =  "INSERT INTO info_user(id_user) 
+                  VALUE('{$user_id}')";
+   
+         mysqli_query($mysqli, $sql);
+         mysqli_close($mysqli);           
+    };

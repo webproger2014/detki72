@@ -31,6 +31,8 @@
         
         if ($data["success"] === 1) {
             createAccount($data);
+            
+            setInfoUser($data);
             autorizationUser($data);
             $data["messages"] = 'add to account success';
         }
@@ -38,6 +40,11 @@
         echo json_encode($data);
     }
     
+    function setInfoUser($data) {
+        $user = getUserByEmail($data["email"]);
+        
+        setInfoUserById($user["id"]);
+    }
     
     function checkDataCreateAccount() {
         $data["success"] = 1;   
