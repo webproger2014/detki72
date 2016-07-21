@@ -1419,7 +1419,7 @@ ul.chat li.left .message .arrow {
 	position: absolute;
 	top: 5px;
 	left: -20px;
-	background: url(www/template/default/icons/chat-left.png) no-repeat 0px 0px;
+	background: url(www/template/default/icons/user_panel/chat-left.png) no-repeat 0px 0px;
 }
 
 ul.chat li.right .message .arrow {
@@ -1429,7 +1429,7 @@ ul.chat li.right .message .arrow {
 	position: absolute;
 	top: 5px;
 	right: -20px;
-	background: url(www/template/default/icons/chat-right.png) no-repeat 0px 0px;
+	background: url(www/template/default/icons/user_panel/chat-right.png) no-repeat 0px 0px;
 }
 
 ul.chat li.right .message {
@@ -1483,12 +1483,12 @@ ul.chat.metro li .message {
 
 ul.chat.metro li.left .message .arrow {
 	left: -22px;
-	background: url(www/template/default/icons/chat-left-metro.png) no-repeat 0px 0px;
+	background: url(/www/template/default/icons/user_panel/chat-left-metro.png) no-repeat 0px 0px;
 }
 
 ul.chat.metro li.right .message .arrow {
 	right: -22px;
-	background: url(www/template/default/icons/chat-right-metro.png) no-repeat 0px 0px;
+	background: url(/www/template/default/icons/user_panel/chat-right-metro.png) no-repeat 0px 0px;
 }
 
 /* Forms
@@ -2594,7 +2594,7 @@ footer {
 /* Typography - Blockquote
 =================================================================== */	
 blockquote {
-	background: url(www/template/default/icons/quote.png) no-repeat 0px 10px;
+	background: url(www/template/default/icons/user_panel/quote.png) no-repeat 0px 10px;
 	font-style: italic;
 	border-left: none;
 	padding: 0 0 0 30px;
@@ -2832,7 +2832,7 @@ ul.messagesList li span.date {
 	width: auto;
 	height: 100%;
 	margin: 20px auto; 
-	background: url(www/template/default/icons/timeline-bg.png) repeat-y center top; 
+	background: url(www/template/default/icons/user_panel/timeline-bg.png) repeat-y center top; 
 }
 
 .timeslot {
@@ -2886,7 +2886,7 @@ ul.messagesList li span.date {
 	right: 0px;
 	height: 20px;
 	width: 20px;
-	background: url(www/template/default/icons/timeline-left-arrow.png) no-repeat;
+	background: url(www/template/default/icons/user_panel/timeline-left-arrow.png) no-repeat;
 }
 
 .timeslot.alt .task .arrow {
@@ -2943,27 +2943,27 @@ ul.messagesList li span.date {
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	
 	.timeslot .task .arrow {
-		background: url(../img/timeline-left-arrow@2x.png) no-repeat;
+		background: url(www/template/default/icons/user_panel/timeline-left-arrow@2x.png) no-repeat;
 		background-size: 100%;
 	}
 	
 	.timeslot.alt .task .arrow {
-		background: url(../img/timeline-right-arrow@2x.png) no-repeat;
+		background: url(www/template/default/icons/user_panel/timeline-right-arrow@2x.png) no-repeat;
 		background-size: 100%;
 	}
 	
 	ul.chat li.left .message .arrow {
-		background: url(../img/chat-left@2x.png) no-repeat 0px 0px;
+		background: url(www/template/default/icons/user_panel/chat-left@2x.png) no-repeat 0px 0px;
 		background-size: 100%;
 	}
 
 	ul.chat li.right .message .arrow {
-		background: url(../img/chat-right@2x.png) no-repeat 0px 0px;
+		background: url(www/template/default/icons/user_panel/chat-right@2x.png) no-repeat 0px 0px;
 		background-size: 100%;
 	}
 	
 	ul.chat.metro li.left .message .arrow {
-		background: url(../img/chat-left-metro@2x.png) no-repeat 0px 0px;
+		background: url(www/template/default/icons/user_panel/chat-left-metro@2x.png) no-repeat 0px 0px;
 		background-size: 100%;
 	}
 
