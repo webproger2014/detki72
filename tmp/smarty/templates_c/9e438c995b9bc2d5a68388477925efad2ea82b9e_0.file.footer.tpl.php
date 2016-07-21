@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2016-07-21 11:23:41
+/* Smarty version 3.1.29, created on 2016-07-21 13:22:57
   from "C:\wamp\www\cms\views\default\user\footer.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5790949dd51f78_20723126',
+  'unifunc' => 'content_5790b091ad4796_99960494',
   'file_dependency' => 
   array (
     '9e438c995b9bc2d5a68388477925efad2ea82b9e' => 
     array (
       0 => 'C:\\wamp\\www\\cms\\views\\default\\user\\footer.tpl',
-      1 => 1469092435,
+      1 => 1469100176,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5790949dd51f78_20723126 ($_smarty_tpl) {
+function content_5790b091ad4796_99960494 ($_smarty_tpl) {
 ?>
 <div class="modal hide fade" id="myModal">
 		<div class="modal-header">

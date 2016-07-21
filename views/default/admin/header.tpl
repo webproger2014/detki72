@@ -6,8 +6,8 @@
 	<meta charset="utf-8">
 	<title>Bootstrap Metro Dashboard by Dennis Ji for ARM demo</title>
 	<meta name="description" content="Bootstrap Metro Dashboard">
-	<meta name="author" content="Dennis Ji">
-	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+	<meta name="author" content="">
+	<meta name="keyword" content="">
 	<!-- end: Meta -->
 	
 	<!-- start: Mobile Specific -->
@@ -44,7 +44,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Metro</span></a>
+				<a class="brand" href="index.html"><span>Detki72</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -209,10 +209,9 @@
 										<span class="avatar"><img src="{$templateWebPath}icons/user_panel/avatar.jpg" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	{$user.login}
 										     </span>
-											<span class="time">
-										    	6 min
+											<span class="time">										    	
 										    </span>
 										</span>
                                         <span class="message">
@@ -225,10 +224,9 @@
 										<span class="avatar"><img src="{$templateWebPath}icons/user_panel/avatar.jpg" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	{$user.login}
 										     </span>
 											<span class="time">
-										    	56 min
 										    </span>
 										</span>
                                         <span class="message">
@@ -241,10 +239,9 @@
 										<span class="avatar"><img src="{$templateWebPath}icons/user_panel/avatar.jpg" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	{$user.login}
 										     </span>
 											<span class="time">
-										    	3 hours
 										    </span>
 										</span>
                                         <span class="message">
@@ -257,7 +254,7 @@
 										<span class="avatar"><img src="{$templateWebPath}icons/user_panel/avatar.jpg" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	{$user.login}
 										     </span>
 											<span class="time">
 										    	yesterday
@@ -273,7 +270,7 @@
 										<span class="avatar"><img src="{$templateWebPath}icons/user_panel/avatar.jpg" alt="Avatar"></span>
 										<span class="header">
 											<span class="from">
-										    	Dennis Ji
+										    	{$user.login}
 										     </span>
 											<span class="time">
 										    	Jul 25, 2012
@@ -298,15 +295,14 @@
 						<!-- start: User Dropdown -->
 						<li class="dropdown">
 							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-								<i class="halflings-icon white user"></i> Dennis Ji
+								<i class="halflings-icon white user"></i> {$user.login}
 								<span class="caret"></span>
 							</a>
 							<ul class="dropdown-menu">
 								<li class="dropdown-menu-title">
- 									<span>Account Settings</span>
+ 									<span>Настройки аккаунта</span>
 								</li>
-								<li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
-								<li><a href="login.html"><i class="halflings-icon off"></i> Logout</a></li>
+								<li><a href="/user/logout/"><i class="halflings-icon off"></i> Выход</a></li>
 							</ul>
 						</li>
 						<!-- end: User Dropdown -->
